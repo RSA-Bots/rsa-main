@@ -7,23 +7,42 @@ Most of the sections describe themselves. If you need any help or have any quest
 If you have any suggestions for the FAQ, make sure to submit them to the form.
 
 # FAQ
-##### Where’s the best place to ask for help?
+**Where’s the best place to ask for help?**
 Under the category titled "Help", you can find many channels suited for asking questions. Anything Roblox related belongs in the Roblox channels. Anything not related to Roblox’s goes in any channel applicable.
 
 
-##### Why am I not receiving help?
+**Why am I not receiving help?**
 Usually, if you don’t ask your question properly, the community responds sarcastically. To avoid that, try to follow the tips in the Asking Good Questions section.
 
 
-##### Can I hire developers here?
+**Can I hire developers here?**
 The short answer is no. This is not a hiring community and is simply here for assistance in scripting. If you're looking for developers for hire, go to Hidden Developers or look on the Roblox DevForum.
 
 
-##### How do I obtain special roles like regular?
+**How do I obtain special roles like regular?**
 There isn’t a guaranteed method of getting them, as it’s not automated by the bot. You mainly obtain them by being active or meeting standards set by the staff, for information ask the staff team.
 
 # Discord Channels
-In progress.
+
+#### For the most part, the channels document themselves. If you want to learn more about a channel, check the channel topic by clicking on the text at the top.
+
+**#roles**
+
+React to the messages in this channel to obtain self assignable roles like colors and event roles.
+
+**#game-jam**
+
+Occasionally, we host game jams which are timed events. You create a game with a given theme within the time constraint. The judges then decide who made the best game. Rewards for participating can include discord roles, robux, discord nitro and more.
+
+**#beginner-resources**
+
+This channel is catered towards helping people who are completely new to scripting. It contains resources that teach you how to use Roblox Studio and how to begin scripting.
+
+**#general-logs**
+
+Yes, you are meant to be able to see this channel. Moderation action is public in this server for transparency purposes. This channel lists out specific moderation actions within the server.
+
+If you have any further questions about the channels in the discord, feel free to ask in `#commons`.
 
 # Discord Roles
 In progress.
