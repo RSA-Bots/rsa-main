@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RSA Common Errors</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/global.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Roblox Script Assistance</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="appeal.html">Appeal</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pages
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="faq.html">FAQ</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item active" href="common_errors.html">Common Errors</a>
+                        <a class="dropdown-item" href="discord_info.html">Discord Info</a>
+                        <a class="dropdown-item" href="online_refs.html">Online References</a>
+                        <a class="dropdown-item" href="bot_guide.html">Bot Guide</a>
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="wrapper">
+            <header>
+                <h1>RSA - Common Errors</h1>
+                <p>Note: Always keep in mind that you have to check your spelling! Everything is case-sensitive.</p>
+                <p>(This section is not 100% comprehensive and you may need extra debugging.)</p>
+                <sub class="view">Updated: 02/18/2021</sub>
+            </header>
+            <section>
+                <h2>Expected X when parsing expression, got ‘Y’:</h2>
+                <p>Simply put, X was expected (whether it be identifier, do, then, etc.) and you instead gave it Y.</p>
+                <p>Potential fixes: Check to see what Y is. If Y is something as simple as an end parenthesis, just get rid of it. If Y is a word like “then” or “do”, just add a condition in between.</p>
+                <br>
+                <h2>Attempt to index X with Y:</h2>
+                <p>This error means you attempted to access something that can’t/shouldn’t be accessed. e.g nil.</p>
+                <p>Potential fixes: Make sure the value you’re attempting to index is not one that cannot be indexed similarly to tables.</p>
+                <br>
+                <h2>Attempt to perform arithmetic (X) on Y and Z:</h2>
+                <p>This error means you attempted to do math on two data types that don’t support the operation provided.</p>
+                <p>Potential fixes: Make sure the data type you’re using can be converted to a number. If it supports metatables, make sure you implement those correctly if applicable.</p>
+                <br>
+                <h2>Unexpected Unicode character: U+2028. Did you mean ‘ ‘?</h2>
+                <p>This error means you pressed shift + enter to start a new line.</p>
+                <p>Potential fixes: You can either undo to before the line is created or rewrite the line. Alternatively, you can delete the whitespace character on the line indicated by the error.</p>
+                <br>
+                <h2>X is not a valid member of Y:</h2>
+                <p>This error means the thing you’re trying to access (whether that be a child, property or something else) does not belong to Y.</p>
+                <p>Potential fixes: Make sure you’re indexing the correct object. Also make sure you have access to the object you’re attempting to index. e.g. The object is stored in ServerStorage and you’re attempting to index it in a LocalScript.</p>
+                <br>
+                <h2>Bad Argument #X, expected Y, got Z</h2>
+                <p>This error means the data type you provided (Z), was not the data type that was expected in the function (Y).</p>
+                <p>Potential fixes: Adjust Z to fit Y’s data type.</p>
+                <br>
+                <h2>Attempt to resume a dead coroutine</h2>
+                <p>This error means that the coroutine that you tried to resume is no longer running, most likely because the code enclosed has finished running.</p>
+                <p>Potential fixes: Create a new coroutine or use a loop inside the thread to keep it from dying.</p>
+                <br>
+                <h2>Expected end, got eof</h2>
+                <p>This error only means that you left out an end.</p>
+                <p>Potential fixes: Add an extra end to close off a function or assignment</p>
+                <br>
+                <h2>Attempt to concatenate X with Y</h2>
+                <p>This error means you attempted to join two things via the .. operation that are not compatible.</p>
+                <p>Potential fixes: Make sure the two things you’re trying to join can actually be concatenated. Only strings can be concatenated, but Lua automatically converts numbers.</p>
+                <br>
+                <h2>Malformed number/string</h2>
+                <p>This error means that you added something extra or forgot to include something to your number/string. Example: 6.hello or “Hi!</p>
+                <p>Potential fixes: Change the number or string so that it doesn’t have something extra or missing.</p>
+                <br>
+                <h2>Attempt to call an X value</h2>
+                <p>This error means you attempted to call a value that isn’t a function or a table that doesn’t have a <code class="language-plaintext highlighter-rouge">__call</code> metamethod attached.</p>
+                <p>Potential fixes: Make sure the value you are attempting to call is a function or in case of a table, make sure it has a <code class="language-plaintext highlighter-rouge">__call</code> metamethod attached when applicable.</p>
+                <br>
+                <h2>Warnings</h2>
+                <p>Sometimes, you may not get an error during runtime, but a red or blue underline on a line supplied by the script analysis tool.</p>
+                <p>A reference to these warnings can be found here: <a href="https://developer.roblox.com/en-us/articles/The-Script-Analysis-Tool">Script Analysis Tool</a></p>
+            </section>
+            <footer>
+                <p>This project is maintained by <a href="https://github.com/RSA-Bots">RSA-Bots</a> and <a href="https://github.com/artblart">Artblart</a></p>
+                <p class="small">Hosted on GitHub Pages -- Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+                <p class="small">Copyright &copy; 2020-2021 Roblox Script Assistance</p>
+            </footer>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    </body>
+</html>
